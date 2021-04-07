@@ -12,6 +12,8 @@ const sendToken = (user, statusCode, res) => {
   };
 
   console.log("TOKEN:", token);
+
+  res.cookie("Name:", "yash");
   res.status(statusCode).cookie("token", token, options).json({
     success: true,
     token,
